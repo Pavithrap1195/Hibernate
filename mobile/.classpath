@@ -32,5 +32,7 @@
 	<classpathentry kind="lib" path="D:/Softwares/Hibernate/hibernate-release-5.6.0.Final/lib/spatial/jts-core-1.18.2.jar"/>
 	<classpathentry kind="lib" path="D:/Softwares/Hibernate/hibernate-release-5.6.0.Final/lib/spatial/postgresql-42.2.16.jar"/>
 	<classpathentry kind="lib" path="D:/Softwares/Hibernate/hibernate-release-5.6.0.Final/lib/spatial/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/Web development course/Hibernate/single_factory_jar_file.jar"/>
+	<classpathentry kind="lib" path="D:/Softwares/Hibernate/single_factory_jar_file.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

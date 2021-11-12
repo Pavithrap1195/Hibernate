@@ -2,8 +2,11 @@ package com.xworkz.mobile.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
 
 //metadata-data about data
 
@@ -19,9 +22,11 @@ public class MobileEntity {
 	// this map db to java program properties
 	// name = the name that as given in database wrt all columns
 	@Column(name = "mobile_id")
+	@GeneratedValue(generator = "abc")
+	@GenericGenerator(name="abc",strategy="increment")
 	private int mobileId;
 
-	@Column(name = "mobile_brand")
+	@Column(name = "mobile_brand")//column name shld be  uppercase
 	private String mobileBrand;
 
 	@Column(name = "mobile_price")
@@ -110,10 +115,10 @@ public class MobileEntity {
 		// TODO Auto-generated constructor stub
 	}
 
-	public MobileEntity(int mobileId, String mobileBrand, double mobilePrice, String rom, String color,
+	public MobileEntity( String mobileBrand, double mobilePrice, String rom, String color,
 			double cameraInPixel, boolean isFingerPrintAvailable, String ostype) {
 		super();
-		this.mobileId = mobileId;
+//		this.mobileId = mobileId;
 		this.mobileBrand = mobileBrand;
 		this.mobilePrice = mobilePrice;
 		this.rom = rom;
