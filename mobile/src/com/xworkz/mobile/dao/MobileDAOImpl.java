@@ -14,7 +14,6 @@ import com.xworkz.sessionfactory.SessionFactoryProvider;
 
 public class MobileDAOImpl implements MobileDAO {
 
-	// singleton session factory
 
 	@Override
 	public void saveMobileEntity() {
@@ -453,11 +452,9 @@ public class MobileDAOImpl implements MobileDAO {
 		System.out.println("Invoked getMobileBrandByostype()");
 		SessionFactory sessionFactory = null;
 		Session session = null;
-		Transaction transaction = null;
 		try {
 			sessionFactory = SessionFactoryProvider.getSessionFactory();
 			session = sessionFactory.openSession();
-			transaction = session.beginTransaction();
 
 			String hqlQuery = "select mobileBrand from MobileEntity where ostype='" + ostype + "'";
 			Query query = session.createQuery(hqlQuery);
@@ -466,7 +463,6 @@ public class MobileDAOImpl implements MobileDAO {
 			System.out.println(mobileBrand);
 
 		} catch (HibernateException e) {
-			session.getTransaction().rollback();
 		} finally {
 			if (session != null) {
 				session.close();

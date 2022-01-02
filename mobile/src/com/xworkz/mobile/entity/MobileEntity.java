@@ -26,7 +26,7 @@ public class MobileEntity {
 	@GenericGenerator(name="abc",strategy="increment")
 	private int mobileId;
 
-	@Column(name = "mobile_brand")//column name shld be  uppercase
+	@Column(name = "mobile_brand")//column name shld be uppercase
 	private String mobileBrand;
 
 	@Column(name = "mobile_price")
